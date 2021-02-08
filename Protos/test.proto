@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcTest";
+
+package test;
+
+// The greeting service definition.
+service test {
+   // Sends a greeting
+  rpc IsOdd (HttpRequest) returns (HttpResponse);
+}
+
+// The request message
+message HttpRequest {
+  string num = 1;
+}
+
+// The response message
+message HttpResponse {
+  string message = 1;
+}
+
